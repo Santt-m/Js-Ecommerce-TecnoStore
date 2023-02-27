@@ -1,0 +1,788 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Sassy+Frass&display=swap");
+
+:root {
+--background: #02050e;
+--primary: #1e50ff;
+--secondary: #272d37;
+--btn-bg: #050d26;
+--bg-azul-10: #e9eeff;
+--bg-white: #fff;
+--bg-electric: #f0fbff;
+--nav-bg: #0f1525;
+
+/* Text colors */
+--text-gray: #adb9c7;
+--text-white: #f3f4f6;
+
+/* Decoration */
+--fire: #ff6d00;
+--electric: #64d3ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/*header*/
+
+body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  width: 100%;
+  max-width: 1900px;
+  border-radius: 100px;
+  background: linear-gradient(to bottom, #686565, var(--background));
+
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  margin: 0 auto;
+  z-index: 999;
+}
+.logo {
+  margin-left: 20px;
+  margin-top: 40px;
+  height: 100px;
+}
+.navbar, .navbar-list {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar {
+    gap: 150px;
+}
+.navbar-list {
+    gap: 30px;
+}
+.navbar-list a {
+    color: var(--text-gray);
+    font-size: 14px;
+}
+.navbar-list li:first-child > a {
+    color: var(--text-white);
+    font-weight: 600;
+}
+.cart-icon {
+    font-weight: 600;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-right: 1rem;
+    color: var(--text-white);
+    cursor: pointer;
+    position: relative;
+}
+.cart-bubble {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    text-align: center;
+    background: var(--primary);
+    color: var(--text-white);
+    font-size: 10px;
+    font-weight: 500;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1px;
+    border-radius: 50%;
+}
+
+/* MENU HAMBURGUESA Desktop */
+
+.menu-label {
+  display: none;
+}
+
+/*carrito*/
+
+
+
+/*Toggle del carro*/
+
+.open-cart {
+  transform: translate(0%);
+  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+.empty-msg {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+/*main*/
+
+main {
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+}
+
+/* section login */
+
+.section-login{
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  min-width: 280px;
+  padding: 5px;
+  min-height: 5vh;
+  background: var(--secondary);
+  border-radius:0px 0px 10px 10px;
+  position: fixed;
+    top: 0;
+  z-index: 100;
+
+  border-bottom: 1px solid var(--text-gray);
+  border-left:  1px solid var(--text-gray);
+  border-right:  1px solid var(--text-gray);
+}
+.section-login form{
+  width: 100%;
+  padding: 5px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.contenedor-login-data{
+  width: 30%;
+}
+.section-login form label{
+  margin-right: 10px;
+  width: 50%;
+  max-width: 200px;
+  align-items: center;
+}
+.section-login form input{
+  border-radius: 5px;
+  width: 45%;
+  max-width: 200px;
+  margin-top: 5px;
+}
+.section-login form button{
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+
+  background-color: var(--primary);
+  color: var(--text-white);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+.section-login form button:hover{
+  color:black;
+  background-color: white;
+  font-weight: bold;
+}
+
+/* DIV de bienvenida */
+
+.div-bienvenida{
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.div-bienvenida p{
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+}
+.div-bienvenida button{
+  width: 100px;
+  height: 35px;
+  margin-top: 5px;
+  border-radius: 5px;
+
+  background-color: var(--primary);
+  color: var(--text-white);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+.div-bienvenida button:hover{
+  color:white;
+  background-color: var(--secondary);
+}
+
+/*Hero*/
+
+#hero {
+  width: 100%;
+  height: 100%;
+  margin-top: 65px;
+  max-width: 1900px;
+  min-height: 110vh;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+#hero h1 {
+  font-family: 'Sassy Frass', cursive;
+  font-size: 300px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  background: linear-gradient(to top, #1201ff, #ec0808);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+#hero h1 span{
+  font-family: 'Sassy Frass', cursive;
+  font-size: 140px;
+  font-weight: 800;
+  background: linear-gradient(to top, #ff0101, #a8ec08);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+#hero p {
+  font-size: 30px;
+  width: 70%;
+  color: var(--text-gray);
+}
+#hero p > span {
+  font-weight: 800;
+}
+#hero a {
+  color: var(--text-white);
+  background-color: var(--primary);
+  width: 120px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+#hero a:hover {
+  background-color:white;
+  color: var(--fire);
+}
+
+/* section registro */
+
+#section-registro{
+  width: 100%;
+  max-width: 1900px;
+  min-height: 100vh;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.registro-card{
+  border: 1px solid white;
+  background-color: var(--secondary);
+  border-radius: 15px;
+  padding: 5px;
+  max-width: 500px;
+  height: 300px;
+  max-height: 500px;
+}
+.registro-card form{
+  width: 100%;
+  height: 95%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.registro-card form label{
+  width: 45%;
+  margin-top: 2px;
+}
+.registro-card form input{
+  width: 45%;
+  margin-top: 2px;
+}
+.registro-card form fieldset{
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  justify-content: end;
+}
+.registro-card form button{
+  width: 100px;
+  height: 50px;
+}
+
+
+/* section info */
+
+#info {
+  width: 100%;
+  max-width: 1900px;
+  min-height: 100vh;
+  padding: 20px;
+  max-width: 1900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+}
+#info h2 {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* info card */
+
+.info-cards-container {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.info-card {
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background: var(--secondary);
+  border-radius: 10px;
+  gap: 20px;
+}
+.info-card img {
+  width: 50px;
+  border-radius: 100px;
+}
+.info-card h3 {
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+.info-card p {
+  width: 90%;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--text-gray);
+}
+
+/* Discover Section */
+
+#discover {
+  padding: 50px;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1900px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.discover-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.discover-info h2 {
+  font-size: 32px;
+  width: 45%;
+  font-weight: 800;
+}
+.discover-text {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 20px;
+}
+.discover-text p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-gray);
+}
+.discover-text a {
+  color: var(--text-white);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.discover-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.discover-cards img {
+  width: 400px;
+}
+
+/* Products Section */
+
+#products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  max-width: 1200px;
+  width: 100%;
+}
+#products h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* categories */
+.categories {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.category {
+  width: 130px;
+  height: 100px;
+  background: var(--btn-bg);
+  border: none;
+  padding: 5px;
+  color: var(--bg-white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.active {
+  background: var(--primary);
+}
+
+/* products */
+
+.products-container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  max-width: 1200px;
+}
+
+/* estilos de las card de productos */
+
+.product {
+  width: 290px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+
+  background: var(--secondary);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  
+  -webkit-animation: fade-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.product img{
+  width: 260px;
+  height: 200px;
+  border-radius: 10px;
+}
+.product-body {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-body h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.div-add{
+  border: 1px solid white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.div-add p{
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--fire);
+  margin-left: 5px;
+}
+
+/* fin cards */
+
+.btn-add,
+.btn-buy,
+.btn-delete {
+  cursor: pointer;
+  padding: 10px 35px;
+  color: var(--bg-white);
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s all ease-out;
+}
+
+.btn-buy,
+.btn-add {
+  background: var(--primary);
+}
+
+.btn-buy,
+.btn-delete {
+  width: 100%;
+}
+
+.btn-delete {
+  border: 2px solid var(--primary);
+  background-color: transparent;
+}
+
+.btn-delete:hover {
+  background: var(--primary);
+  transition: 0.3s all ease-in;
+}
+
+.btn-load {
+  background: none;
+  border: 1px solid var(--electric);
+  padding: 10px 35px;
+  color: var(--bg-white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  background: var(--background);
+  color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+footer a,
+footer p {
+  color: var(--text-gray);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+footer span {
+  font-weight: 800;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* estilos extras */
+
+.hidden {
+  display: none;
+}
+.disabled {
+  background-color: var(--text-gray);
+  color: white;
+  cursor: not-allowed;
+  border: none;
+}
+.disabled:hover {
+  background-color: var(--text-gray);
+  color: white;
+  cursor: not-allowed;
+  border: none;
+}
+.add-modal {
+  padding: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  background-color: green;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.5s ease-out;
+  transform: translateY(200%);
+}
+.active-modal {
+  transform: translateY(0);
+  transition: all 0.5s ease-in;
+}
+
+
+
+/* Agregamos el scroll behavior smooth para que sea mas suave la navegacion */
+/* scroll padding top para cuando apreta en el link tambien tome en cuenta la altura del navbar
+ y no nos tape parte de la seccion*/
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+  }
+  
+  /*Header*/
+  /*Para efecto de glassmorphismo cuando abrimos menú hamburguesa y carrito*/
+  
+  /*GLASMORPHISM:
+    Básicamente, el concepto principal de esta tendencia es poner un fondo semitransparente que
+    añade un difuminado al fondo del div en el que se aplique. En este caso, lo usamos para que al abrir el menú
+    hamburguesa y el carrito lo demás de la página se vea borroso abajo de este div de clase overlay.
+    */
+  
+  .overlay {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1; /*Para que quede por encima del resto de las cosas*/
+  
+    /*Efecto de Glassmorphismo*/
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: none;
+  }
+  
+  /*Toggle para el overlay (para que funcione unicamente cuando abrimos carrito o menu hamburguesa.
+    Aclarar que funciona porque son elementos hermanos y overlay esta debajo de los dos inputs en el código.*/
+  .show-overlay {
+    display: block;
+  }
+  
+  /*Hover de los elementos "a" del navbar*/
+  .navbar-list li {
+    position: relative;
+    padding: 0;
+  }
+  
+  .navbar-list li a::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: var(--text-white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s ease;
+  }
+  
+  .navbar-list li a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+  
+  /*CARRITO */
+
+  /*Despues de cambiar el carrito en el html y en styles.css , aplicamos una animación en hover*/
+  .cart-icon {
+    transition: all 0.2s ease-out;
+  }
+  
+  .cart-icon:hover {
+    color: var(--electric);
+    border-color: var(--electric);
+    transition: all 0.2s ease-in;
+  }
+  
+  /*Botones del carrito*/
+  .quantity-handler {
+    transition: all 0.2s ease-in;
+  }
+  
+  .quantity-handler:hover {
+    cursor: pointer;
+    background-color: var(--electric);
+    transition: all 0.2s ease-in;
+  }
+  
+  /*Botones comprar(carrito) y add(producto) y BENUCBER(Hero)*/
+  .btn-add,
+  .hero-info a {
+    transition: all 0.2s ease-out;
+  }
+  
+  .btn-add:hover,
+  .hero-info a:hover {
+    background-color: var(--fire);
+    transition: all 0.2s ease-in;
+  }
+  
+  /* Boton ver mas de la sección de productos */
+
+  .btn-load {
+    transition: all 0.2s ease-out;
+    font-weight: 600;
+  }
+  
+  .btn-load:hover {
+    background-color: var(--electric);
+    color: var(--text-white);
+    transition: all 0.2s ease-in;
+  }

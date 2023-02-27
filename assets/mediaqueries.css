@@ -1,0 +1,271 @@
+/* Mediaqueries */
+
+/* Tablet */
+
+@media (max-width: 992px) {
+/*header*/
+    .navbar {
+        gap: 10px;
+    }  
+    .cart-icon {
+      border: 0px solid;
+    }  
+    .navbar-list {
+      position: absolute;
+      top: 65px;
+      left: 5%;
+      right: 5%;
+      width: 90%;
+      flex-direction: column;
+      background-color: var(--nav-bg);
+      border: 2px solid var(--electric);
+      border-top: 0px;
+      border-radius: 0px 0px 15px 15px;
+      align-items: flex-start;
+      padding: 45px 30px;
+      gap: 25px;
+      z-index: 2;
+      display: none;
+    }  
+    .navbar-list a {
+      font-size: 18px;
+    }
+
+    /* Mostramos el icono del menu */
+
+    .menu-label {
+      display: flex;
+      order: 2;
+      cursor: pointer;
+    }  
+    .menu-label img {
+      height: 20px;
+      width: 25px;
+    }  
+    .open-menu {
+      display: flex;
+    }
+    .section-login{
+      margin-top: 100px;
+      flex-wrap: wrap;
+      
+      width: 100%;
+      height: 15vh;
+      background: green;
+    }
+
+    /* section login */
+
+    .section-login {
+        width: 70%;
+        margin-top: 65px;
+        padding: 10px;
+        flex-wrap: wrap;
+        height: 15vh;
+        background: var(--secondary);
+    }
+    .contenedor-login-data{
+        width: 50%;
+      }
+    .section-login form label{
+        font-size: 15px;
+        width: 20%;
+    }
+
+    /*Hero*/
+
+    #hero h1 {
+        font-size: 150px;
+    }
+    #hero p {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    /*info*/
+    #info h2 {
+        text-align: center;
+        font-size: 25px;
+    }
+    .info-cards-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .info-card {
+        width: 200px;
+        height: 300px;
+    }
+    .info-card h3{
+        font-size: 15px;
+    }
+    .info-card img {
+        width: 25px;
+        height: 25px;
+    }
+    .info-card p{
+        font-size: 10px;
+    }
+
+    /* discover */
+
+    .discover-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .discover-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .discover-cards img {
+        width: 200px;
+        height: 200px;
+    }
+    .discover-info h2 {
+        font-size: 25px;
+    }
+    .discover-text p {
+        font-size: 15px;
+    }
+
+    /* Products */
+    .categories {
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    .category {
+        width: 120px;
+    }
+}
+
+/* Celu */
+
+@media (max-width: 576px) {
+    .logo {
+        margin-left: 20px;
+        width: 50px;
+        height: 50px;
+      }
+    /* Modificar el carrito para celu*/
+    .cart {
+        left: 0;
+        width: 100%;
+        border: none;
+    }
+
+    .cart-item {
+      flex-wrap: wrap;
+    }
+    /* hero */
+
+    #hero h1{
+        font-size: 100px;
+    }
+    #hero h1 span{
+        font-size: 50px;
+    }
+    /*Info*/
+
+    .info-card {
+      height: 250px;
+    }
+
+    .info-card p {
+      width: 90%;
+      font-size: 10px;
+      font-weight: bold;
+    }
+  
+    /* discover */
+    #discover {
+      width: 80%;
+    }
+  
+    #discover h2 {
+      font-size: 20px;
+      width: 100%;
+    }
+  
+    .discover-text {
+      width: 100%;
+      padding: 10px;
+      line-height: 30px;
+      gap: 50px;
+    }
+  
+    .discover-text a {
+      font-size: 20px;
+    }
+  
+    .discover-cards {
+      gap: 20px;
+    }
+  
+    .discover-cards img {
+      width: 100%;
+    }
+  
+    /* products */
+  
+    .category {
+      width: 150px;
+    }
+  
+    .products-container {
+      width: 80%;
+    }
+  
+    .product {
+      width: 100%;
+    }
+  
+    .product-info h3,
+    .product-info p,
+    .product-info span {
+      font-size: 14px;
+    }
+    /*footer*/
+    .footer-links {
+      flex-direction: column;
+      text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .section-login form label{
+        font-size: 10px;
+        width: 20%;
+    }
+    .section-login form{
+        justify-content: center;
+    }
+    .contenedor-login-data{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .section-login form input{
+        font-size: 10px;
+    }
+    .section-login form button{
+        width: 75px;
+        height: 25px;
+        font-size: 10px;
+    }
+    .cart {
+      min-width: unset;
+    }
+    .cart-container {
+      align-items: center;
+    }
+    .cart-item {
+      width: 70%;
+      justify-content: center;
+      gap: 20px;
+      flex-direction: column;
+    }
+    .item-info {
+      text-align: center;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="./assets/style.css">
+<link rel="stylesheet" href="./assets/mediaqueries.css">
+<link rel="stylesheet" href="./assets/animaciones.css">
+<link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+<title>Santt tecno Store | Inicio</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./assets/img/logo.png" alt="Santt tecno store logo"/>
+        <nav class="navbar">
+            <div class="menu-label">
+                <img src="./assets/img/menu.png" alt="" class="menu-icon" />
+            </div>
+            <ul class="navbar-list">
+                <li><a class="navbar-link" href="#hero">Inicio</a></li>
+                <li><a class="navbar-link" href="#section-registro">registrarse</a></li>
+                <li><a class="navbar-link" href="#discover">Ofertas</a></li>
+                <li><a class="navbar-link" href="#products">productos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section-login">
+            <form id="inicio-sesion">
+                <div class="contenedor-login-data">
+                    <label for="usuario-login">usuario:</label><input type="text" id="usuario-login" required>
+                </div>
+                <div class="contenedor-login-data">
+                    <label for="contrasena-login">Contraseña:</label><input type="password" id="contrasena-login" required>
+                </div>
+                
+                    <button type="submit">Iniciar sesión</button>
+            </form>
+            <div id="bienvenida" class="div-bienvenida">
+                <!-- aca se renderizan los datos del usuario por js -->
+            </div>
+        </section>
+        <section id="hero">
+                <h1>Tecno<span>store</span></h1>
+                <p>Es la mejor aplicacion web para comprar y vender productos tecnologicos.
+                <span>No esperes mas y</span> ...</p>
+                <a href="#info">Registrate</a>
+        </section>
+        <section id="section-registro">
+            <div class="registro-card">
+                <h2>Registro de usuario</h2>
+                <form id="registro">
+                    <label for="nombre">Nombre completo:</label><input type="text" id="nombre" required>
+                    <label for="usuario">Nombre de usuario:</label><input type="text" id="usuario" required>
+                    <label for="contrasena">Contraseña:</label><input type="password" id="contrasena" required>
+                    <label for="mail">Correo electrónico:</label><input type="email" id="mail" required>
+                    <fieldset>
+                        <button type="submit">Registrarse</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section id="info">
+            <h2>Descubri los mejores productos al un precio increible solo en 3 simples pasos</h2>
+            <div class="info-cards-container">
+                <div class="info-card">
+                    <img src="./assets/img/info/registro.png" alt="Icono registro" />
+                    <h3>Registrate</h3>
+                    <p>para obtener acceso exclusivo a promociones y descuentos en nuestros productos, además de una experiencia de compra personalizada.</p>
+                </div>
+                <div class="info-card">
+                    <img src="./assets/img/info/carrito.png" alt="Icono carrito" />
+                    <h3>Agregá los productos al carrito</h3>
+                    <p>De una manera super sencilla agrega los productos del comprador que mas te convenga y nosotros nos encargamos de enviartelo.</p>
+                </div>
+                <div class="info-card">
+                    <img src="./assets/img/info/disfruta.png" alt="Icono de felicidad" />
+                    <h3>Disfruta!</h3>
+                    <p>Gracias a nuestro sistema de reparto inteligente los productos te van a llegar super rapido para que puedas disfrutarlos cuanto antes.</p>
+                </div>
+            </div>
+        </section>
+        <section id="discover">
+        <div class="discover-info">
+            <h2>Encontra todo lo que buscas</h2>
+            <div class="discover-text">
+                <p>Gracias a nuestro potente algoritmo y a nuestros vendedores vas a poder encontrar todo eso que buscas al mejor precio posible.</p>
+                <a href="#">Buscar ahora</a>
+            </div>
+        </div>
+        <div class="discover-cards">
+            <img src="./assets/img/discover/darth-vader.png" alt="darth vader" />
+            <img src="./assets/img/discover/trooper.png" alt="trooper" />
+            <img src="./assets/img/discover/yoda.png" alt="yoda" />
+        </div>
+        </section>
+        <section id="products">
+        <h2>Lista de productos</h2>
+        <div class="categories">
+            <button class="category active">🧲Todo</button>
+            <button class="category" data-category="computadoras">💻 computadoras</button>
+            <button class="category" data-category="smartphones">📱 smartphones</button>
+            <button class="category" data-category="smartwatchs">⌚ smartwatchs</button>
+            <button class="category" data-category="Consolas">🎮 Consolas</button>
+            <button class="category" data-category="Auriculares">🎧 Auriculares</button>
+            <button class="category" data-category="Instrumentos">🎺 Instrumentos</button>
+        </div>
+        <div class="products-container">
+            <!-- Aca se renderizan las cards de productos desde Javascript papuu -->
+        </div>
+        <button class="btn-load">Ver Más</button>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <ul class="footer-links">
+                <li><a href="#">Términos de Uso</a></li>
+                <li><a href="#">Trabajá con Nosotros</a></li>
+                <li><a href="#">Soporte</a></li>
+            </ul>
+        </div>
+        <p>Hecho con ❤️ en <span>NUCBACRYPTO</span></p>
+    </footer>
+    <div class="add-modal"></div>
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
+    <script src="./users.js"></script>
+</body>
+</html>
