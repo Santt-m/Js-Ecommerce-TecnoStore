@@ -130,14 +130,12 @@ const showMoreProducts = () => {
 
 // esta funcion abre y cierra el menu
 
-const toggleMenu = () => {
-	barsMenu.classList.toggle("open-menu");
-	if (cartMenu.classList.contains("open-cart")) {
-		cartMenu.classList.remove("open-cart");
-		return;
-	}
-	overlay.classList.toggle("show-overlay");
-};
+const menuBtn = document.querySelector(".menu-label");
+const navbar = document.querySelector(".navbar-list");
+
+menuBtn.addEventListener("click", () => {
+	navbar.classList.toggle("hidden");
+});
 
 
 //funcion de inicio
