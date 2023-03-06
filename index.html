@@ -25,8 +25,31 @@
                 <li><a class="navbar-link" href="#discover">Ofertas</a></li>
                 <li><a class="navbar-link" href="#products">productos</a></li>
             </ul>
+            <div class="cart-label">
+                <i class="fa-solid fa-cart-shopping cart-icon">
+                    <div class="cart-bubble">0</div>
+                </i>
+            </div>
+            <div class="cart">
+                <h2>Tus NFTs</h2>
+                <div class="cart-container">
+                </div>
+                <span class="divider"></span>
+                <div class="cart-total">
+                    <p>Total:</p>
+                    <span class="total">18.3 ETH</span>
+                </div>
+                <button class="btn-buy">Comprar</button>
+                <button class="btn-delete">Vaciar carrito</button>
+            </div>
+            <div class="overlay"></div>
         </nav>
     </header>
+    <div class="cont-carrito hidden">
+        <h4>Carrito de compras</h4>
+        <ul id="cart"></ul>
+        <p>Total: <span id="cartTotal"></span></p>
+    </div>
     <main>
         <section class="section-login">
             <form id="inicio-sesion">
@@ -106,9 +129,9 @@
             <button class="category" data-category="computadoras">💻 computadoras</button>
             <button class="category" data-category="smartphones">📱 smartphones</button>
             <button class="category" data-category="smartwatchs">⌚ smartwatchs</button>
-            <button class="category" data-category="Consolas">🎮 Consolas</button>
-            <button class="category" data-category="Auriculares">🎧 Auriculares</button>
-            <button class="category" data-category="Instrumentos">🎺 Instrumentos</button>
+            <button class="category" data-category="consolas">🎮 Consolas</button>
+            <button class="category" data-category="auriculares">🎧 Auriculares</button>
+            <button class="category" data-category="instrumentos">🎺 Instrumentos</button>
         </div>
         <div class="products-container">
             <!-- Aca se renderizan las cards de productos desde Javascript papuu -->
@@ -128,7 +151,7 @@
     </footer>
     <div class="add-modal"></div>
     <script src="./data.js"></script>
-    <script src="./index.js"></script>
     <script src="./users.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

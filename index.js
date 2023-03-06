@@ -7,12 +7,11 @@ const categories = document.querySelector(".categories");
 // Botón de ver más
 const btnLoad = document.querySelector(".btn-load");
 
-// Botón para abrir y cerrar menú
-const barsBtn = document.querySelector(".menu-label");
-
 //  Menú (Hamburguesa)
 const barsMenu = document.querySelector(".navbar-list");
 
+// botones de las categorias
+const categoriesList = categories.querySelectorAll("button");
 
 // esta funcion renderiza las card de los productos
 
@@ -38,11 +37,11 @@ const renderProduct = (product) => {
 // esta funcion hace funcionar el boton de ver mas
 // empieza con el index en 0 y suma 6 cada vez que se apreta el boton
 
-const renderDividedProducts = (index = 0) => {
+function renderDividedProducts(index = 0) {
 	products.innerHTML += productsController.dividedProducts[index]
 		.map(renderProduct)
 		.join("");
-};
+}
 
 // esta funcion filtra los productos por categoria
 
@@ -78,11 +77,11 @@ const changeShowMoreBtnState = (category) => {
 const changeBtnActiveState = (selectedCategory) => {
 	const categories = [...categoriesList];
 	categories.forEach((categoryBtn) => {
-		if (categoryBtn.dataset.category !== selectedCategory) {
-			categoryBtn.classList.remove("active");
-			return;
-		}
-		categoryBtn.classList.add("active");
+	  if (!selectedCategory || categoryBtn.dataset.category !== selectedCategory) {
+		categoryBtn.classList.remove("active");
+		return;
+	  }
+	  categoryBtn.classList.add("active");
 	});
 };
 
@@ -112,8 +111,6 @@ const applyFilter = (e) => {
 	}
 };
 
-
-
 const isLastIndexOf = () => {
 	return (
 		productsController.nextProductsIndex === productsController.productsLimit
@@ -138,13 +135,25 @@ menuBtn.addEventListener("click", () => {
 });
 
 
-//funcion de inicio
-
 const init = () => {
-	
 	renderProducts();
 	categories.addEventListener("click", applyFilter);
 	btnLoad.addEventListener("click", showMoreProducts);
+	barsBtn.addEventListener("click", toggleMenu);
+	cartBtn.addEventListener("click", toggleCart);
+	barsMenu.addEventListener("click", closeOnClick);
+	window.addEventListener("scroll", closeOnScroll);
+	overlay.addEventListener("click", closeOnOverlayClick);
+	document.addEventListener("DOMContentLoaded", renderCart);
+	document.addEventListener("DOMContentLoaded", showTotal);
+	products.addEventListener("click", addProduct);
+	productsCart.addEventListener("click", handleQuantity);
+	buyBtn.addEventListener("click", completeBuy);
+	deleteBtn.addEventListener("click", deleteCart);
+	disableBtn(buyBtn);
+	disableBtn(deleteBtn);
+	renderCartBubble();
 };
 
 init();
+
