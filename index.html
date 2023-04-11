@@ -15,6 +15,26 @@
 <body>
     <header>
         <img class="logo" src="./assets/img/logo.png" alt="Santt tecno store logo"/>
+        <div class="login-label">
+            <img src="./assets/img/user.png" alt="">
+            <div class="section-login hidden">
+                <form id="inicio-sesion">
+                    <div class="contenedor-login-data">
+                        <label for="usuario-login">usuario:</label><input type="text" id="usuario-login" required>
+                    </div>
+                    <div class="contenedor-login-data">
+                        <label for="contrasena-login">Contraseña:</label><input type="password" id="contrasena-login" required>
+                    </div>
+                    <div class="contenedor-login-data">
+                        <button type="submit">Iniciar sesión</button>
+                    </div>
+                    
+                </form>
+                <div id="bienvenida" class="div-bienvenida">
+                    <!-- aca se renderizan los datos del usuario por js -->
+                </div>
+            </div>
+        </div>
         <nav class="navbar">
             <div class="menu-label">
                 <img src="./assets/img/menu.png" alt="" class="menu-icon" />
@@ -25,19 +45,21 @@
                 <li><a class="navbar-link" href="#discover">Ofertas</a></li>
                 <li><a class="navbar-link" href="#products">productos</a></li>
             </ul>
+
             <div class="cart-label">
+                <img src="./assets/img/cart-icon.svg" alt="">
                 <i class="fa-solid fa-cart-shopping cart-icon">
                     <div class="cart-bubble">0</div>
                 </i>
             </div>
             <div class="cart">
-                <h2>Tus NFTs</h2>
+                <h2>Tus productos</h2>
                 <div class="cart-container">
                 </div>
                 <span class="divider"></span>
                 <div class="cart-total">
                     <p>Total:</p>
-                    <span class="total">18.3 ETH</span>
+                    <span class="total">$ 0</span>
                 </div>
                 <button class="btn-buy">Comprar</button>
                 <button class="btn-delete">Vaciar carrito</button>
@@ -45,34 +67,13 @@
             <div class="overlay"></div>
         </nav>
     </header>
-    <div class="cont-carrito hidden">
-        <h4>Carrito de compras</h4>
-        <ul id="cart"></ul>
-        <p>Total: <span id="cartTotal"></span></p>
-    </div>
     <main>
-        <section class="section-login">
-            <form id="inicio-sesion">
-                <div class="contenedor-login-data">
-                    <label for="usuario-login">usuario:</label><input type="text" id="usuario-login" required>
-                </div>
-                <div class="contenedor-login-data">
-                    <label for="contrasena-login">Contraseña:</label><input type="password" id="contrasena-login" required>
-                </div>
-                <div class="contenedor-login-data">
-                    <button type="submit">Iniciar sesión</button>
-                </div>
-                
-            </form>
-            <div id="bienvenida" class="div-bienvenida">
-                <!-- aca se renderizan los datos del usuario por js -->
-            </div>
-        </section>
+        
         <section id="hero">
                 <h1>Tecno<span>store</span></h1>
                 <p>Es la mejor aplicacion web para comprar y vender productos tecnologicos.
                 <span>No esperes mas y</span> ...</p>
-                <a href="#info">Registrate</a>
+                <a href="#section-registro">Registrate</a>
         </section>
         <section id="section-registro">
             <div class="registro-card">
@@ -113,13 +114,8 @@
             <h2>Encontra todo lo que buscas</h2>
             <div class="discover-text">
                 <p>Gracias a nuestro potente algoritmo y a nuestros vendedores vas a poder encontrar todo eso que buscas al mejor precio posible.</p>
-                <a href="#">Buscar ahora</a>
+                <a href="#products">Buscar ahora</a>
             </div>
-        </div>
-        <div class="discover-cards">
-            <img src="./assets/img/discover/darth-vader.png" alt="darth vader" />
-            <img src="./assets/img/discover/trooper.png" alt="trooper" />
-            <img src="./assets/img/discover/yoda.png" alt="yoda" />
         </div>
         </section>
         <section id="products">
@@ -140,18 +136,13 @@
         </section>
     </main>
     <footer>
-        <div>
-            <ul class="footer-links">
-                <li><a href="#">Términos de Uso</a></li>
-                <li><a href="#">Trabajá con Nosotros</a></li>
-                <li><a href="#">Soporte</a></li>
-            </ul>
+        <a href="https://pagina-personal-cbrs.vercel.app/"><img class="footer-img-me" src="./assets/img/footer/profile.png" alt="me logo"></a>
+        <div class="footer-txt">
+            <p>Echo con ​💖​ por </p><a href="https://pagina-personal-cbrs.vercel.app/">Santiago Maruottolo</a>
         </div>
-        <p>Hecho con ❤️ en <span>NUCBACRYPTO</span></p>
+            <a href="https://github.com/Santt-m"><img class="footer-img-git" src="./assets/img/footer/github.png" alt="github Logo"></a>
     </footer>
     <div class="add-modal"></div>
-    <script src="./data.js"></script>
-    <script src="./users.js"></script>
-    <script src="./index.js"></script>
+    <script src="./assets/js-module/inicio.js" type="module"></script>
 </body>
 </html>
